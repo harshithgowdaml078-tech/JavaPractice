@@ -28,7 +28,7 @@ public class Product {
     }
 
     public void drawpixelAt(int x, int y, String color) {
-         System.out.printf("pixel  %d, %d and in color %s ", x, y, color);
+         System.out.printf("pixel %d, %d is in color %s ", x, y, color);
     }
 }
  class motherboard extends  Product {
