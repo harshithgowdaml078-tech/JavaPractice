@@ -11,6 +11,16 @@ public class Movie {
         String instancetype = this.getClass().getSimpleName();
         System.out.println(title + " is a " + instancetype + " film");
     }
+
+    public static Movie getmovie(String type, String title) {
+        return switch (type.toUpperCase().charAt(0)) {
+            case 'A' -> new Adventure(title);
+            case 'C' -> new Comedy(title);
+            case 'S' -> new Scifi(title);
+            default -> new Movie(title);
+        };
+    }
+
 }
 class Adventure extends Movie{
     public Adventure(String title) {
@@ -53,7 +63,10 @@ class Scifi extends Movie {
                 "Alien attack Earth",
                 "Space guys fight with aliens",
                 "Planet at end of time wait for part -2");
+        System.out.println(this.getClass());
+        System.out.println(this.getClass().getSimpleName());
     }
+
 
 }
 

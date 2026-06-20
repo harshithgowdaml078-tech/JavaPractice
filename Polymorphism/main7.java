@@ -1,14 +1,24 @@
 package Polymorphism;
 
+import java.util.Scanner;
+
 public class main7 {
     static void main(String[] args) {
-Movie themovie = new Movie("Star Wars");
-themovie.WatchMovie();
-Movie adventure = new Adventure("Life of Walter Mitty");
-adventure.WatchMovie();
-Movie comedy = new Comedy("Hangover");
-comedy.WatchMovie();
-Movie scifi = new Scifi("Arrival");
-scifi.WatchMovie();
+//Movie themovie = Movie.getmovie("S","Star Wars");
+//themovie.WatchMovie();
+
+        Scanner s = new Scanner(System.in);
+        while(true) {
+            System.out.println("Enter (A for Adventure and C for Comedy " +
+                    " Enter (S fo ScienceFiction and Q for Quit");
+            String type = s.nextLine();
+            if("Qq".contains(type)) {
+                break;
+            }
+            System.out.println("Enter Movie Title");
+            String title = s.nextLine();
+            Movie theMovie = Movie.getmovie(type,title);
+            theMovie.WatchMovie();
+        }
     }
 }
