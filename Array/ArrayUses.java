@@ -25,6 +25,22 @@ public class ArrayUses {
         int[] largerrandom = Arrays.copyOf(random4, 13);
         System.out.println(Arrays.toString(largerrandom));
 
+        String[] sarray = new String[]{"John Snow", "Rhanaeyra Targaryen", "Tyrion Lannister", "Robb stark", "Alicent Hightower"};
+        System.out.println(Arrays.toString(sarray));
+        Arrays.sort(sarray);
+        System.out.println(Arrays.toString(sarray));
+        if(Arrays.binarySearch(sarray, "Tyrion Lannister") >=0) {
+            System.out.println("The Powerfull always preyed on powerless to remain in power");
+        }
+        int[] a1 = {4, 5, 6, 8, 9};
+        int[] a2 = {4, 5, 6, 8, 9};
+        if(Arrays.equals(a1, a2)) {
+            System.out.println("Arrays are equal");
+        } else {
+            System.out.println("Arrays are not equal");
+        }
+
+
     }
 
     private static int[] getRandomArray(int len) {

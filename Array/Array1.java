@@ -1,5 +1,7 @@
 package Array;
 
+import java.util.Arrays;
+
 public class Array1 {
     static void main(String[] args) {
         int[] newarray = new int[5];
@@ -11,10 +13,33 @@ public class Array1 {
         int newlength = newdouble.length;
         System.out.println("Length = " + newlength);
         System.out.println("last = " +newdouble[ (newlength - 1)]);
-        String newstring[];
-        newstring = new String[] {"Virat Kohli", "Sachin Tendulkar", "Ab Develliers", "Ricky Ponnting", "Kumar Sangakkaa"};
-        for (int i = 0; i < newstring.length; i++) {
-            System.out.println(newstring[i] + "");
+        int newint[];
+        //newstring = new String[] {"Virat Kohli", "Sachin Tendulkar", "Ab Develliers", "Ricky Ponnting", "Kumar Sangakkaa"};
+        newint = new int[5];
+        for (int i = 0; i < newint.length; i++) {
+            newint[i] = newint.length - i;
         }
+        for (int i = 0; i < newint.length; i++) {
+            System.out.println(newint[i] + "");
+        }
+        System.out.println();
+        for(int element : newint) {
+            System.out.println(element + " = " );
+        }
+        System.out.println();
+        System.out.println(Arrays.toString(newint));
+        Object objectvariable = newint;
+        if(objectvariable instanceof int[]) {
+            System.out.println("Object variable is an instance of");
+        }
+
+        Object[] objecrarray = new Object[3];
+        objecrarray[0] = "Hello";
+        objecrarray[1] = new StringBuilder(" World");
+        objecrarray[2] = newarray;
+        System.out.println(Arrays.toString(objecrarray) + " ");
+
+
+
     }
 }
